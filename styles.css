@@ -1,0 +1,150 @@
+html {
+    background-color: rgb(0, 0, 0); 
+    font-family: "Impact", sans-serif;
+    color: rgb(255, 217, 3);
+}
+
+body {
+    margin: 0px;
+}
+
+.top-container {
+    position: relative;
+}
+
+#top-image {
+    width:100%;
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    color: rgb(226, 15, 15);
+    font-size: 6vw;
+    animation: flicker 1.5s infinite alternate;
+    -webkit-text-stroke: 0.2vw rgb(255, 253, 121);
+}
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 35px rgb(255, 0, 30);
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+/*CSS for flicker effect found at - https://css-tricks.com/how-to-create-neon-text-with-css/*/
+
+#arrow {
+    position: absolute;
+    top: 68%;
+    left: 48%;
+    width: 5vw;
+    height: 7vw;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    position: absolute;
+    top: 60%;
+    left: 41%;
+    font-size: 2vw;
+}
+
+h2 {
+    margin-left: 10px;
+    font-size: 2vw
+}
+
+#queue-container {
+    display: flex;
+    height: 260px;
+    width: 99%;
+    overflow-x: auto;
+}   
+
+.remove-button{
+    height: 25px;
+    width: 25px;
+    margin-left: 95px;
+    font-family: "Monaco", monospace;
+    color: white;
+}
+
+.remove-button:hover {
+    -webkit-text-stroke: 1px rgb(255, 217, 3);
+}
+
+p {
+    size: 15px;
+    font-family: "Monaco", monospace;
+    margin-left: 10px;
+    font-size: 1vw
+}
+
+.line {
+    width:100%;
+}
+
+#movie-container {
+    display:flex;
+    justify-content: center;
+    height: 480px;
+    width: 100%;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.movie-box {
+    background-color: rgb(47, 47, 48);
+    width: 185px;
+    height: 220px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+#queue-container .movie-box:hover {
+    width: 200px;
+    height: 250px;
+    font-size: 21px;
+}
+
+#movie-container .movie-box:hover {
+    border-style: solid;
+    border-width: thin;
+    color: rgb(255, 217, 3);
+}
+
+@media screen and (max-device-width: 1440px) {
+    h1 {
+        font-size: 7vw;
+        left: 36%;
+        -webkit-text-stroke: 0.3vw rgb(255, 253, 121);
+    }
+
+    h3 {
+        top: 70%;
+        left: 43%;
+    }
+
+    #arrow {
+        left: 46%;
+        top: 78%;
+    }
+
+    .movie-box {
+        font-size: 26px;
+    }
+
+    #queue-container .movie-box:hover {
+        font-size: 28px;
+    }
+}
